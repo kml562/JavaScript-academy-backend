@@ -3,7 +3,10 @@ import { signUp,login,logout,getAllUsers,getSingleUser } from "../controllers/us
 
 const router= express.Router();
 
-
+router.get("/test", function (req, res) {
+    return res.send({hello: "world"})
+}
+)
 router.get('/user/:id', getSingleUser)
 router.post('/signup', signUp)
 router.post('/login', login)
